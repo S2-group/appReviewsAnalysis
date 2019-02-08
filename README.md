@@ -4,14 +4,14 @@ A classificication script for app reviews.
 
 ## Installation
 
-Suggested steps to install required component and run the script:
+Suggested steps to install required components and run the script:
 
-- Download and install [Anaconda Python]
-- Run the anaconda navigator and install [Spyder]
+- Download and install [Anaconda Python], it is a free and open-source distribution of the Python and R programming languages for scientific computing, that aims to simplify package management and deployment
+- Run the anaconda navigator and install [Spyder], it is a Python development environment (IDE) specifically designed for data science 
 - Run Spyder from the anaconda navigator 
 - Open [appReviewsAnalysis/blob/master/analysis/classification.py] in Spyder
 - Change line 11 to point to your local directory
-- Run the file to execute the script (top menu or F5 button)
+- Run the `classification.py` file (top menu or F5 button)
 
 ## Trubleshooting
 
