@@ -78,7 +78,7 @@ tfidf = TfidfVectorizer(tokenizer=LemmaTokenizer(), # comment to remove lemmatiz
                         ngram_range = (1,2),
                         strip_accents = 'unicode',
                         stop_words = 'english',
-                        #analyzer = stem_words, # comment to remove stemming
+                        analyzer = stem_words, # comment to remove stemming
                         sublinear_tf = True)
 
 # <codecell>
