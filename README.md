@@ -1,6 +1,6 @@
 # appReviewsAnalysis
 
-A classificication script for app reviews.
+A classification script for Android app reviews.
 
 ## Installation
 
