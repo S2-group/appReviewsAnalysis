@@ -9,7 +9,7 @@ Suggested steps to install required components and run the server:
 
 - `npm install` inside this folder to install the required node packages
 - `pip install -r requirements.txt` inside this folder to install all required Python packages
-- `node server.js` to run the server, which by default will run on http://localhost:6700
+- `node server.js` to run the server, which by default will run on http://localhost:6700/
 
 
 ## Notes
