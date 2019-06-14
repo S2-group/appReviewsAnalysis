@@ -523,7 +523,6 @@ def classification():
 
 
             # PREDICTION OF UNLABELED DATA in ./results
-            probab = 1  # Use of probability estimations or not
             if MODE:
                 if not os.path.exists('./results'):
                     os.makedirs('./results')
@@ -533,11 +532,12 @@ def classification():
                 # ONE FILE PER CLASSIFIER AND LABEL
 
                 # Only use probability predictions if the classifier offers the method 'predict_proba'
-                probab = 0
+
                 if hasattr(p, 'predict_proba'):
                     probab = 1
                     results_proba_pos = p.predict_proba(unlabeled)[:, 1]
-
+                else:
+                    probab = 0
                 # Change the binary predictions to 0s and 1s instead of 'Positive' and 'Negative'
                 for i in range(0, num_lines2):
                     if results[i] == 'Positive':
@@ -619,12 +619,13 @@ def classification():
                                 balanced_train["Label"],
                                 scoring=scoring,
                                 cv=RepeatedKFold(n_splits=N_SPLITS, n_repeats=N_REPEATS))
+                roc = 1  # Use of probability estimations or not
 
             except (ValueError, AttributeError):
                 scoring = {'f1': 'f1_macro',
                            'precision': 'precision_macro',
                            'recall': 'recall_macro'}
-                probab = 0
+                roc = 0
                 scores = cross_validate(p,
                                         balanced_train,
                                         balanced_train["Label"],
@@ -644,15 +645,16 @@ def classification():
             if MODE:
                 pos = list(results).count("1")
                 neg = num_lines2 - pos
-                if not probab:
-                    print('{:^9}{:^10}{:8}{:12}'.format(round(test_score, 5), "N/A", pos, neg))
-                else:
+                if roc:
                     print('{:^9}{:^15}{:^8}'.format(round(test_score, 5), pos, neg))
-            else:
-                if not probab:
-                    print('{:^9}{:^10}'.format(round(test_score, 5),"N/A"))
                 else:
+                    print('{:^9}{:^10}{:8}{:12}'.format(round(test_score, 5), "N/A", pos, neg))
+            else:
+                if roc:
                     print('{:^9}'.format(round(test_score, 5)))
+                else:
+                    print('{:^9}{:^10}'.format(round(test_score, 5),"N/A"))
+
 
 
 # ---------------------------------------INTERFACE------------------------------------------------------
