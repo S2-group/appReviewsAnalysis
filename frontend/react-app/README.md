@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Prerequisites: Node.js
 
 - Run `npm install` to install all required node packages
-- Run `npm start` to start the dev server, which runs at [http://localhost:3000]
+- Run `npm start` to start the dev server, which runs at http://localhost:3000
 
 ## Available Scripts
 
