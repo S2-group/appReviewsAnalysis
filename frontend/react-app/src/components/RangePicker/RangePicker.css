@@ -1,0 +1,125 @@
+.RangeBlock {
+  clear: both;
+}
+.RangeBlock .rangeblock-title {
+  margin-bottom: 25px;
+}
+.RangeBlock .rangeblock-range-input {
+  text-align: center;
+}
+.RangeBlock .fa.arrow {
+  margin-left: -1px;
+  font-size: 10px;
+  color: #969494;
+}
+.RangeBlock .rangeblock-form {
+  display: inline-block;
+  margin: 10px 10px;
+}
+.RangeBlock .rangeblock-form .rangeblock-label {
+  display: inline-block;
+  font-weight: 700;
+  margin-right: 5px;
+  margin-top: 1px;
+  font-size: 13px;
+}
+.RangeBlock .rangeblock-form .rangeblock-input {
+  display: inline-block;
+}
+.RangeBlock .rangeblock-form .rangeblock-textbox {
+  width: 50px;
+  height: 20px;
+  font-size: 13px;
+  background-color: transparent;
+  border: 0px solid white;
+  outline: none;
+  border-bottom: 2px solid #cacaca;
+  text-align: center;
+  transition: all 150ms ease-in-out;
+}
+.RangeBlock .rangeblock-form .rangeblock-textbox:focus {
+  border-color: #3c8dbc;
+}
+.RangeBlock .InputRange {
+  height: 2rem;
+  width: auto;
+  margin: 0px 12px;
+}
+.RangeBlock .InputRange .InputRange-slider {
+  width: 1.3rem;
+  height: 1.3rem;
+  margin-top: -1.1rem;
+  margin-left: -1rem;
+  border-radius: 0;
+  background-color: #3c8dbc;
+  border-color: #3c8dbc;
+}
+.RangeBlock .InputRange .InputRange-slider::after {
+  content: "";
+  height: 0.90rem;
+  width: 0.90rem;
+  display: block;
+  background-color: #3c8dbc;
+  position: relative;
+  top: 0.75rem;
+  left: 0.078rem;
+  transform: rotate(45deg);
+}
+.RangeBlock .InputRange .InputRange-slider:active {
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  background-color: #5fa4cc;
+  border-color: #5fa4cc;
+}
+.RangeBlock .InputRange .InputRange-slider:active::after {
+  background-color: #5fa4cc;
+}
+.RangeBlock .InputRange .InputRange-label {
+  color: #000;
+  font-family: inherit;
+  font-size: 95%;
+  line-height: 0;
+  white-space: nowrap;
+  z-index: -1;
+}
+.RangeBlock .InputRange .InputRange-label--value {
+  left: calc(-50% - 4px);
+  font-size: 11px !important;
+  text-shadow: 0px 0px black;
+}
+.RangeBlock .InputRange .InputRange-track {
+  background-color: #dedede;
+  transition: none;
+}
+.RangeBlock .InputRange .InputRange-track--active {
+  background-color: #307095;
+}
+.RangeBlock .InputRange .InputRange-sliderContainer {
+  transition: none;
+}
+.RangeBlock .InputRange .InputRange-label--max {
+  right: 4px;
+}
+.RangeBlock .InputRange .InputRange-label--max .InputRange-labelContainer::before {
+  content: "";
+  display: block;
+  background-color: #adabab;
+  width: 1px;
+  height: 6px;
+  position: relative;
+  left: 50%;
+  bottom: 9px;
+}
+.RangeBlock .InputRange .InputRange-label--min {
+  left: -3px;
+}
+.RangeBlock .InputRange .InputRange-label--min .InputRange-labelContainer::before {
+  content: "";
+  display: block;
+  background-color: #adabab;
+  width: 1px;
+  height: 6px;
+  position: relative;
+  left: 50%;
+  bottom: 9px;
+}

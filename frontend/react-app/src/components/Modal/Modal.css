@@ -1,0 +1,76 @@
+.custom-modal {
+  position: fixed;
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 150ms ease-in-out, transform 0s linear 0ms;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  padding: 40px;
+}
+.custom-modal.hidden {
+  display: block !important;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 150ms linear, transform 0s linear 150ms;
+}
+.custom-modal.hidden .modal-container {
+  opacity: 0;
+  transform: scale(0.85);
+}
+.custom-modal .modal-background {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.custom-modal .modal-container {
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.34);
+  z-index: 10001;
+  max-height: 100%;
+  min-height: 200px;
+  padding: 0;
+  transition: opacity 250ms linear, transform 250ms linear;
+  opacity: 1;
+  transform: scale(1);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.custom-modal .modal-container.wide {
+  max-width: 1200px;
+}
+.custom-modal .modal-inner-content {
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+  padding: 0px 20px;
+}
+.custom-modal .modal-footer {
+  padding: 10px 10px;
+  text-align: right;
+}
+.custom-modal .modal-footer button {
+  padding: 3px 20px;
+}
+.custom-modal .exit-button {
+  float: right;
+  position: relative;
+  top: -23px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.custom-modal .exit-button:hover {
+  color: #5a5a5a;
+}
+.custom-modal .modal-title {
+  font-weight: bold;
+  font-size: 17px;
+  text-align: center;
+  padding: 10px;
+}
