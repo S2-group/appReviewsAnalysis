@@ -1,0 +1,10 @@
+#
+####### requirements.txt #######
+#
+###### Requirements for running the classification script ######
+pandas
+numpy
+pluginbase
+sklearn
+nltk
+#
