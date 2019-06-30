@@ -67,7 +67,8 @@ class ResultBox extends Component {
       {label: "Precision", name: "prec", align: "left"},
       {label: "Recall", name: "rec", align: "left"},
       {label: "Accuracy", name: "testacc", align: "left"},
-      {label: "F1", name: "f1", align: "left"}
+      {label: "F1", name: "f1", align: "left"},
+      {label: "AuC", name: "auc", align: "left"}
     ];
 
     return (

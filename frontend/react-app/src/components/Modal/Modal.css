@@ -44,7 +44,7 @@
   margin: 0 auto;
 }
 .custom-modal .modal-container.wide {
-  max-width: 1200px;
+  max-width: 1300px;
 }
 .custom-modal .modal-inner-content {
   max-height: calc(100vh - 200px);

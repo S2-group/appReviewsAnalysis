@@ -92,6 +92,11 @@ body {
   padding-left: 3px;
   color: #353535;
 }
+.App .App-body .config-block .config-option .option-label svg {
+  float: right;
+  color: gray;
+  margin-top: 6px;
+}
 .App .App-body .param .param-label {
   font-size: 13px;
   margin-right: 3px;

@@ -206,7 +206,7 @@ class App extends Component {
   onClassifyClick = () => {
     // Basic form check
     if (this.state.classification.length + this.state.plugins.length < 1 ){
-      this.setState({UIerror: <span>No <b>classifiers</b> or <b>plugins</b> selected</span>});
+      this.setState({UIerror: <span>No <b>classifiers</b> selected</span>});
       return;
     }
 
@@ -374,21 +374,17 @@ class App extends Component {
                   </div>
                 )
               }):<div className="center"><Spinner/></div>}
-            </div>
-
-            <div className="config-block block block-max">
-              <div className="block-title"><FontAwesomeIcon icon={faPuzzlePiece} /> Plugins</div>
 
               {(this.state.options)? this.state.options.plugins.map((item, i) => {
                 return(
                   <div key={i} className="config-option">
                     <label>
                       <input type="checkbox" className="option-checkbox" checked={this.state.plugins.some(e => e.index === i)} onChange={(e) => this.handlePluginClick({index: i, name: item}, e)} />
-                      <span className="option-label">{item}</span>
+                      <span className="option-label">{item}<FontAwesomeIcon icon={faPuzzlePiece} /></span>
                     </label>
                   </div>
                 )
-              }):<div className="center"><Spinner/></div>}
+              }):null}
             </div>
 
             <div className="config-block block block-max">
