@@ -5,6 +5,8 @@ Prerequisites: Node.js
 
 - Run `npm install` to install all required node packages
 - Run `npm start` to start the dev server, which runs at http://localhost:3000
+- To allow the front-end to connect to the server, `server.js` from the server folder also needs to be running. By default, all API calls from within the
+development environment are proxied to http://localhost:6700. This can be changed in the `package.json`.
 
 ## Available Scripts
 
