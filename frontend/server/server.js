@@ -31,8 +31,8 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-// getoptions will be called on pageload on the client
-app.get('/api/getoptions', (req, res) => {
+// options will be called on pageload on the client
+app.get('/api/options', (req, res) => {
     // PyShell configuration
     let options = {
         mode: 'text',

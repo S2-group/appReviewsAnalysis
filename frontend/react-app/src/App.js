@@ -45,7 +45,7 @@ class App extends Component {
   }
 
   componentDidMount(){
-    axios.get('/api/getoptions')
+    axios.get('/api/options')
     .then(response => {
 
       // Pre-select the first option from the classifiers list
