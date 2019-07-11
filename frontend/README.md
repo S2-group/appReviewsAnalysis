@@ -18,7 +18,7 @@ The `Classify` button starts the classification process using the configured par
 #### Results view
 ![Results View](https://github.com/S2-group/appReviewsAnalysis/blob/master/frontend/img/results.jpg?raw=true)
 
-The results view is shows when the classification process is finished. It consists of two main parts: the **overview**, and the **comparison**. 
+The results view is shown when the classification process is finished. It consists of two main parts: the **overview**, and the **comparison**. 
 The **overview** contains a separate box for every classification algorithm that was used. It shows average stats such as the _precision_ and the _recall_ over all classified labels, for each classification algorithm.
 
 The **comparison** part contains two identical tab containers. Each tab container has a tab for every used classification algorithm, allowing the user to display the details of two classification algorithms side by side. These details consist of a frequency graph that shows the distribution of the frequency of all labels, and a detail table. This table contains detailed statistics on every label, and can be sorted by any of these values.
