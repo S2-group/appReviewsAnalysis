@@ -2,16 +2,26 @@
 
 A React-based GUI built on top of the Python-based AppReviewAnalysis classification pipeline.
 
-![Configuration View](https://i.imgur.com/DUIEXnA.jpg)
-
 ## UI Summary
-The user interface consists of two columns. The left column is used for data entry, and the right column is used for the pipeline configuration.
 
-The data entry column contains two similar input boxes. The first of the two allows the user to choose or upload an unlabeled data file, and the second allows the user to select or upload a manually labeled data file.
+#### Configuration view
+![Configuration View](https://github.com/S2-group/appReviewsAnalysis/blob/master/frontend/img/config.jpg?raw=true)
+The configuration view is the main view of the application. It consists of two columns: the left column is used for data entry, and the right column is used for the pipeline configuration.
 
-The configuration column sequentially contains a box for every step of the classification pipeline. They allow the user to choose pre-processing options, the feature extraction method, the classification algorithms that will be used, and the testing parameters. Plugins are shown in the classification box, marked by an icon.
+The data entry column contains two similar input boxes. The first of the two allows the user to choose or upload an unlabeled data file, and the second allows the user to select or upload a manually labeled data file. The choice of data source can be made through the use of the tab controls.
+
+The configuration column sequentially contains a box for every step of the classification pipeline. They allow the user to choose pre-processing options, the feature extraction method, the classification algorithms that will be used, and the testing parameters such as the train/test split and the number of folds. Plugins are shown in the classification box, marked by an icon.
 
 The `Classify` button starts the classification process using the configured parameters.
+
+#### Results view
+![Results View](https://github.com/S2-group/appReviewsAnalysis/blob/master/frontend/img/results.jpg?raw=true)
+The results view is shows when the classification process is finished. It consists of two main parts: the **overview**, and the **comparison**. 
+The **overview** contains a separate box for every classification algorithm that was used. It shows average stats such as the _precision_ and the _recall_ over all classified labels, for each classification algorithm.
+
+The **comparison** part contains two identical tab containers. Each tab container has a tab for every used classification algorithm, allowing the user to display the details of two classification algorithms side by side. These details consist of a frequency graph that shows the distribution of the frequency of all labels, and a detail table. This table contains detailed statistics on every label, and can be sorted by any of these values.
+
+Pressing `OK` brings the user back to the configuration view.
 
 ## Server Installation
 Prerequisites: Node.js and Python
