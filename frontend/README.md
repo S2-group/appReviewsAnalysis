@@ -6,6 +6,7 @@ A React-based GUI built on top of the Python-based AppReviewAnalysis classificat
 
 #### Configuration view
 ![Configuration View](https://github.com/S2-group/appReviewsAnalysis/blob/master/frontend/img/config.jpg?raw=true)
+
 The configuration view is the main view of the application. It consists of two columns: the left column is used for data entry, and the right column is used for the pipeline configuration.
 
 The data entry column contains two similar input boxes. The first of the two allows the user to choose or upload an unlabeled data file, and the second allows the user to select or upload a manually labeled data file. The choice of data source can be made through the use of the tab controls.
@@ -16,6 +17,7 @@ The `Classify` button starts the classification process using the configured par
 
 #### Results view
 ![Results View](https://github.com/S2-group/appReviewsAnalysis/blob/master/frontend/img/results.jpg?raw=true)
+
 The results view is shows when the classification process is finished. It consists of two main parts: the **overview**, and the **comparison**. 
 The **overview** contains a separate box for every classification algorithm that was used. It shows average stats such as the _precision_ and the _recall_ over all classified labels, for each classification algorithm.
 
