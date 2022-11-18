@@ -50,7 +50,7 @@
     "react": "^16.8.6",
     "react-app-polyfill": "^1.0.1",
     "react-bar-chart": "^0.1.2",
-    "react-dev-utils": "^9.0.1",
+    "react-dev-utils": "^12.0.1",
     "react-dom": "^16.8.6",
     "react-input-range": "^1.3.0",
     "react-minimal-pie-chart": "^4.1.0",
